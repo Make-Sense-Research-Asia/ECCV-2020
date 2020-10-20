@@ -6,7 +6,6 @@
 
 ### 1. Counterfactual Vision-and-Language Navigation via Adversarial Path Sampler
 
-```
 <details>
 <summary>
 Abstract
@@ -14,7 +13,6 @@ Abstract
 <br/>
 Vision-and-Language Navigation (VLN) is a task where agents must decide how to move through a 3D environment to reach a goal by grounding natural language instructions to the visual surroundings. One of the problems of the VLN task is data scarcity since it is difficult to collect enough navigation paths with human-annotated instructions for interactive environments. In this paper, we explore the use of counterfactual thinking as a human-inspired data augmentation method that results in robust models. Counterfactual thinking is a concept that describes the human propensity to create possible alternatives to life events that have already occurred. We propose an adversarial-driven counterfactual reasoning model that can consider effective conditions instead of low-quality augmented data. In particular, we present a model-agnostic adversarial path sampler (APS) that learns to sample challenging paths that force the navigator to improve based on the navigation performance. APS also serves to do pre-exploration of unseen environments to strengthen the model's ability to generalize. We evaluate the influence of APS on the performance of different VLN baseline models using the room-to-room dataset (R2R). The results show that the adversarial training process with our proposed APS benefits VLN models under both seen and unseen environments. And the pre-exploration process can further gain additional improvements under unseen environments.
 </details>
-```
 
 [[pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123510069.pdf)] [[supplementary material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123510069-supp.pdf)]
 
