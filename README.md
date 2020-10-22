@@ -23,10 +23,13 @@
     + [9. TRRNet: Tiered Relation Reasoning for Compositional Visual Question Answering](#9-trrnet--tiered-relation-reasoning-for-compositional-visual-question-answering)
     + [10. Interpretable Visual Reasoning via Probabilistic Formulation under Natural Supervision](#10-interpretable-visual-reasoning-via-probabilistic-formulation-under-natural-supervision)
     + [* VisualCOMET: Reasoning about the Dynamic Context of a Still Image](#--visualcomet--reasoning-about-the-dynamic-context-of-a-still-image)
+  * [Visual Grounding](#visual-grounding)
+    + [1. Contrastive Learning for Weakly Supervised Phrase Grounding](#1-contrastive-learning-for-weakly-supervised-phrase-grounding)
+    + [2. Propagating Over Phrase Relations for One-Stage Visual Grounding](#2-propagating-over-phrase-relations-for-one-stage-visual-grounding)
+    + [3. Improving One-stage Visual Grounding by Recursive Sub-query Construction](#3-improving-one-stage-visual-grounding-by-recursive-sub-query-construction)
+
 
 ## ECCV 2020
-
-
 
 ### VLN
 
@@ -217,7 +220,6 @@ Abstract
 <br/>
     While attention has been an increasingly popular component in deep neural networks to both interpret and boost performance of models, little work has examined how attention progresses to accomplish a task and whether it is reasonable. In this work, we propose an Attention with Reasoning capability (AiR) framework that uses attention to understand and improve the process leading to task outcomes. We first define an evaluation metric based on a sequence of atomic reasoning operations, enabling quantitative measurement of attention that considers the reasoning process. We then collect human eye-tracking and answer correctness data, and analyze various machine and human attentions on their reasoning capability and how they impact task performance. Furthermore, we propose a supervision method to jointly and progressively optimize attention, reasoning, and task performance so that models learn to look at regions of interests by following a reasoning process. We demonstrate the effectiveness of the proposed framework in analyzing and modeling attention with better reasoning capability and task performance. The code and data are available at https://github.com/szzexpoi/AiR
 </details>
-
 [[pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460086.pdf)] 
 
 [[supplementary material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460086-supp.zip)]
@@ -381,4 +383,52 @@ Abstract
 [[supplementary material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500494-supp.pdf)]
 
 
+
+### Visual Grounding
+
+#### 1. Contrastive Learning for Weakly Supervised Phrase Grounding
+
+Tanmay Gupta, Arash Vahdat, Gal Chechik, Xiaodong Yang, Jan Kautz, Derek Hoiem
+
+<details>
+<summary>
+Abstract
+</summary>
+<br/>
+    Phrase grounding, the problem of associating image regions to caption words, is a crucial component of vision-language tasks. We show that phrase grounding can be learned by optimizing word-region attention to maximize a lower bound on mutual information between images and caption words. Given pairs of images and captions, we maximize compatibility of the attention-weighted regions and the words in the corresponding caption, compared to non-corresponding pairs of images and captions. A key idea is to construct effective negative captions for learning through language model guided word substitutions. Training with our negatives yields a $\sim10\%$ absolute gain in accuracy over randomly-sampled negatives from the training data. Our weakly supervised phrase grounding model trained on COCO-Captions shows a healthy gain of $5.7\%$ to achieve $76.7\%$ accuracy on Flickr30K Entities benchmark. Our code and project material will be available at http://tanmaygupta.info/info-ground."
+</details>
+
+[[pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480749.pdf)] 
+
+[[supplementary material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480749-supp.zip)]
+
+#### 2. Propagating Over Phrase Relations for One-Stage Visual Grounding
+
+Sibei Yang, Guanbin Li, Yizhou Yu
+
+<details>
+<summary>
+Abstract
+</summary>
+<br/>
+    Phrase level visual grounding aims to locate in an image the corresponding visual regions referred to by multiple noun phrases in a given sentence. Its challenge comes not only from large variations in visual contents and unrestricted phrase descriptions but also from unambiguous referrals derived from phrase relational reasoning. In this paper, we propose a linguistic structure guided propagation network for one-stage phrase grounding. It explicitly explores the linguistic structure of the sentence and performs relational propagation among noun phrases under the guidance of the linguistic relations between them. Specifically, we first construct a linguistic graph parsed from the sentence and then capture multimodal feature maps for all the phrasal nodes independently. The node features are then propagated over the edges with a tailor-designed relational propagation module and ultimately integrated for final prediction. Experiments on Flicker30K Entities dataset show that our model outperforms state-of-the-art methods and demonstrate the effectiveness of propagating among phrases with linguistic relations.
+</details>
+
+[[pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640579.pdf)] 
+
+#### 3. Improving One-stage Visual Grounding by Recursive Sub-query Construction
+
+Zhengyuan Yang, Tianlang Chen, Liwei Wang, Jiebo Luo
+
+<details>
+<summary>
+Abstract
+</summary>
+<br/>
+    We improve one-stage visual grounding by addressing current limitations on grounding long and complex queries. Existing one-stage methods encode the entire language query as a single sentence embedding vector, e.g., taking the embedding from BERT or the hidden state from LSTM. This single vector representation is prone to overlooking the detailed descriptions in the query. To address this query modeling deficiency, we propose a recursive sub-query construction framework, which reasons between image and query for multiple rounds and reduces the referring ambiguity step by step. We show our new one-stage method obtains 5.0%, 4.5%, 7.5%, 12.8% absolute improvements over the state-of-the-art one-stage approach on ReferItGame, RefCOCO, RefCOCO+, and RefCOCOg, respectively. In particular, superior performances on longer and more complex queries validates the effectiveness of our query modeling. Code is available at https://github.com/zyang-ur/ReSC .
+</details>
+
+[[pdf](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590375.pdf)] 
+
+[[supplementary material](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590375-supp.pdf)]
 
